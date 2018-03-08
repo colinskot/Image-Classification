@@ -321,6 +321,24 @@ def test_model():
         helper.display_image_predictions(random_test_features, random_test_labels, random_test_predictions)
 
 
+def run_tests():
+
+    import problem_unittests as t
+
+    t.test_folder_path(cifar10_dataset_folder_path)
+    t.test_normalize(normalize)
+    t.test_one_hot_encode(one_hot_encode)
+    t.test_nn_image_inputs(neural_net_image_input)
+    t.test_nn_label_inputs(neural_net_label_input)
+    t.test_nn_keep_prob_inputs(neural_net_keep_prob_input)
+    t.test_con_pool(conv2conv2d_maxpool)
+    t.test_flatten(flatten)
+    t.test_fully_conn(fully_conn)
+    t.test_output(output)
+    t.test_conv_net(conv_net)
+    t.test_train_nn(train_neural_network)
+
+
 if __name__ == '__main__':
 
     # Preprocess Training, Validation, and Testing Data
